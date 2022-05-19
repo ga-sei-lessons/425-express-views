@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Site</title>
+		<!-- href path is assumed to start in the static folder (Public) -->
+		<link rel="stylesheet" href="./css/styles.css" />
+	</head>
+
+	<body>
+		<h1>Weclome to <%= name %>'s Site</h1>
+		<% let dogAge = age * 7 %>
+		<h2> <%= name %> is <%= dogAge %> years old in dog years </h2>
+
+		<% let status %>
+		<% if (dogAge < 100) { %>
+			<% status = 'young dog' %>
+		<% } else { %>
+			<% status = 'old dog' %>
+		<% } %>
+			
+		<h3>I would say that I am an <%= status %></h3>
+
+		<ul>
+			<% for (let i = 0; i < 100; i++) { %>
+				<li> i am number <%= i %></li>
+			<% } %>
+		</ul>
+		<script src="./js/script.js"></script>
+	</body>
+</html>

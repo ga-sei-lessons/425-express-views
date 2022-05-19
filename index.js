@@ -4,6 +4,8 @@ const express = require('express')
 // set up express app
 const app = express()
 const PORT = 3333
+// tell express to use ejs to render html from templates
+app.set('view engine', 'ejs')
 
 // middlewares (code that runs every time a request happens)
 // app.use()
@@ -22,17 +24,21 @@ app.get('/', (req, res) => {
 	// we have to tell express what directory to get the file from
 	// the path will change based on the 'enviroment'
 	// dunder dirname
-	res.sendFile(__dirname + '/views/index.html')
+	// res.sendFile(__dirname + '/views/index.html')
+	// res.render('template file', { dataobject })
+	res.render('index.ejs', { name: 'Sterling Archer', age: 35 }) // assumes we are in the 'views' folder
 })
 
 // GET /about -- about page
 app.get('/about', (req, res) => {
-	res.sendFile(__dirname + '/views/about.html')
+	// res.sendFile(__dirname + '/views/about.html')
+	res.render('about.ejs')
 })
 
 // GET /blog -- show blog page
 app.get('/blog', (req, res) => {
-	res.sendFile(__dirname + '/views/blog.html')
+	// res.sendFile(__dirname + '/views/blog.html')
+	res.render('blog.ejs')
 })
 
 // listen on a port
