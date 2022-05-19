@@ -32,7 +32,9 @@ app.get('/', (req, res) => {
 // GET /about -- about page
 app.get('/about', (req, res) => {
 	// res.sendFile(__dirname + '/views/about.html')
-	res.render('about.ejs')
+	// define an array of 3 items 'your favorite things' and render them on the about page using a forEach loop
+	const myFavorites = ['bash', 'javascript', 'html', 'ejs', 'node', 'canvas']
+	res.render('about.ejs', { myFavorites })
 })
 
 // GET /blog -- show blog page

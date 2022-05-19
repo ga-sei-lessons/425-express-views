@@ -8,5 +8,14 @@
 
 	<body>
 		<h1>The About Page</h1>
+
+		<h2>Some of my favorite things</h2>
+		<ul>
+			<% myFavorites.forEach(favorite => { %>
+				<div>
+					<li> <%= favorite %> </li>
+				</div>
+			<% }) %>
+		</ul>
 	</body>
 </html>
