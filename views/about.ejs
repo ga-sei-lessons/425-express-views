@@ -1,21 +1,11 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>My Site</title>
-		<!-- href path is assumed to start in the static folder (Public) -->
-		<link rel="stylesheet" href="./css/styles.css" />
-	</head>
 
-	<body>
-		<h1>The About Page</h1>
+<h1>The About Page</h1>
 
-		<h2>Some of my favorite things</h2>
-		<ul>
-			<% myFavorites.forEach(favorite => { %>
-				<div>
-					<li> <%= favorite %> </li>
-				</div>
-			<% }) %>
-		</ul>
-	</body>
-</html>
+<h2>Some of my favorite things</h2>
+<ul>
+	<% myFavorites.forEach(favorite => { %>
+		<div>
+			<li> <%= favorite %> </li>
+		</div>
+	<% }) %>
+</ul>

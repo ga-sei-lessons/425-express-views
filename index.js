@@ -1,5 +1,6 @@
 // required packages
 const express = require('express')
+const ejsLayouts = require('express-ejs-layouts')
 
 // set up express app
 const app = express()
@@ -11,6 +12,7 @@ app.set('view engine', 'ejs')
 // app.use()
 // hey express -- my assets folder is called Public
 app.use(express.static('Public'))
+app.use(ejsLayouts) // only needed if you are using ejs layouts
 
 // res.send -- tries to figure out what to send (not specific)
 // res.json -- send json data
